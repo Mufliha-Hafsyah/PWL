@@ -128,34 +128,5 @@ Dilakukan pengiriman variabel dari Controller ke View menggunakan method with().
 
 </blockquote>
 </details>
-
-<br>
-
-<details>
-<summary><b>TUGAS MANDIRI: APLIKASI POS</b></summary>
-<br>
-<blockquote>
-
-**Laporan Hasil Pembuatan Project Point of Sales (POS):**
-
-1. **Halaman Home**
-   Menampilkan ringkasan utama aplikasi.
-   ![Screenshot Home](isi_link_gambar)
-
-2. **Halaman Products (Category)**
-   Menampilkan daftar produk berdasarkan kategori menggunakan route prefix.
-   ![Screenshot Products](isi_link_gambar)
-
-3. **Halaman User**
-   Menampilkan profil pengguna berdasarkan ID dan Nama.
-   ![Screenshot User](isi_link_gambar)
-
-4. **Halaman Penjualan (Transactions)**
-   Menampilkan antarmuka transaksi penjualan.
-   ![Screenshot Penjualan](isi_link_gambar)
-
-</blockquote>
-</details>
-
 ---
 <p align="right">Tahun Akademik 2025/2026</p>
