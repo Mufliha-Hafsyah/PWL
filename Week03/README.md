@@ -244,6 +244,9 @@
 
 ![Hasil Praktkum](img/p5.12.png)
 
+</blockquote>
+</details>
+
 <br>
 
 <details>
@@ -267,15 +270,21 @@
 ![Hasil Praktkum](img/p6.5.png)
 
 **Membuat view user.blade.php**
+
+
 ![Hasil Praktkum](img/p6.6.png)
 
 **Hasil yang terjadi setelah dijalankan di browser**
+
+
 ![Hasil Praktkum](img/p6.7.png)
 
 **Modifikasi lagi file UserController**
 ![Hasil Praktkum](img/p6.8.png)
 
 **Hasil yang terjadi setelah dijalankan di browser**
+
+
 ![Hasil Praktkum](img/p6.9.png)
 
 **Modifikasi lagi file UserController**
@@ -284,6 +293,9 @@
 **Hasil yang terjadi setelah dijalankan di browser**
 
 ![Hasil Praktkum](img/p6.11.png)
+
+</blockquote>
+</details>
 
 
 
