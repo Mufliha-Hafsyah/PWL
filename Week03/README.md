@@ -1,5 +1,5 @@
-# PEMROGRAMAN WEB LANJUT - JOBSHEET 02
-## Routing, Controller, dan View
+# PEMROGRAMAN WEB LANJUT - JOBSHEET 03
+## MIGRATION, SEEDER, DB FAÇADE, QUERY BUILDER, dan ELOQUENT ORM
 
 ---
 
@@ -13,58 +13,18 @@
 ---
 
 ### Dokumentasi Praktikum
-*Klik pada judul bagian untuk melihat hasil screenshot.*
-
 <br>
 
 <details>
-<summary><b>PRAKTIKUM 1 : ROUTE</b></summary>
+<summary><b>PRAKTIKUM 1 : Pengaturan Database</b></summary>
 <br>
 <blockquote>
 
-**Membuat Route '/hello'**
-Pada tahap ini dilakukan pembuatan route get dengan URL/hello, akan menampilkan teks 'Hello World'.
-![Hasil Routing Dasar](img/helloWorld.png)
+**Membuat database baru dengan nama PWL_POS**
+![Hasil Praktikum](img/p1.1.png)
 
-**Menambahkan Route '/world'**
-Pada tahap ini dilakukan pembuatan route dasar untuk menampilkan teks 'World'.
-![Hasil Routing Dasar](img/world.png)
-
-**Mengubah Route '/'**
-Pada tahap ini dilakukan pembuatan route dasar untuk menampilkan pesan 'Selamat Datang'.
-![Hasil Routing Dasar](img/selamatDatang.png)
-
-**Membuat Route '/about'**
-Pada tahap ini dilakukan pembuatan route dasar untuk menampilkan identitas mahasiswa (NIM dan Nama).
-![Hasil Routing Dasar](img/nimNama.png)
-
-**Membuat Route '/user/{name}'**
-Pada tahap ini dilakukan pembuatan route dasar untuk menampilkan teks 'Nama saya NamaAnda'.
-![Hasil Routing Dasar](img/userName.png)
-
-**Membuat Route '/user/'**
-Pada tahap ini halaman akan menampilkan 'error not found'.
-![Hasil Routing Dasar](img/notFound.png)
-
-**Membuat Route yang menerima parameter $postId dan juga $comment.**
-Pada tahap ini halaman akan menampilkan 'Post ke- Komentar ke- '.
-![Hasil Routing Dasar](img/posKomentar.png)
-
-**Membuat Route '/articles/{id}/'**
-Pada tahap ini halaman akan menampilkan 'Halaman Artikel dengan ID {id}'.
-![Hasil Routing Dasar](img/idArticle.png)
-
-**Memanggil Route '/user' sekaligus mengirimkan parameter $name yang bersifat opsional (null).**
-Pada tahap ini halaman akan menampilkan 'Nama saya '.
-![Hasil Routing Dasar](img/nameNull.png)
-
-**Memanggil Route '/user' sekaligus mengirimkan parameter $name yang bersifat opsional(not null).**
-Pada tahap ini halaman akan menampilkan 'Nama saya NamaAnda'.
-![Hasil Routing Dasar](img/nameNotNull.png)
-
-**Implementasi Optional Parameter**
-Pada tahap ini halaman akan menampilkan 'Nama saya John' karena parameter $nama nilai defaultnya adalah 'John'.
-![Hasil Routing Dasar](img/john.png)
+**Menyesuaikan file .env dengan database PWL_POS**
+![Hasil Praktikum](img/p1.2.png)
 
 </blockquote>
 </details>
@@ -72,37 +32,71 @@ Pada tahap ini halaman akan menampilkan 'Nama saya John' karena parameter $nama 
 <br>
 
 <details>
-<summary><b>PRAKTIKUM 2 : CONTROLLER</b></summary>
+<summary><b>PRAKTIKUM 2.1 : Pembuatan file migrasi tanpa relasi</b></summary>
 <br>
 <blockquote>
 
-**Pembuatan Welcome Controller**
-Pemindahan logika dari file route ke dalam WelcomeController untuk merapikan struktur kode.
-![Hasil Welcome Controller](img/controller1.png)
+**Membuat file migrasi untuk table m_level**
+![Hasil Praktkum](img/p2.1.1.png)
+![Hasil Praktkum](img/p2.1.2.png)
+![Hasil Praktkum](img/p2.1.3.png)
+![Hasil Praktkum](img/p2.1.4.png)
 
-**Page Controller '/'**
-Pembuatan PageController yang menangani beberapa halaman sekaligus (Home, About, dan Articles).
-![Hasil Page Controller](img/controller2.png)
+**Membuat file migrasi untuk table m_kategori**
+![Hasil Praktkum](img/p2.1.5.png)
+![Hasil Praktkum](img/p2.1.6.png)
+![Hasil Praktkum](img/p2.1.7.png)
+![Hasil Praktkum](img/p2.1.8.png)
 
-**Page Controller '/about/'**
-Pembuatan PageController yang menangani beberapa halaman sekaligus (Home, About, dan Articles).
-![Hasil Resource Controller](img/controller3.png)
+**Membuat file migrasi untuk table m_supplier**
+![Hasil Praktkum](img/p2.1.9.png)
+![Hasil Praktkum](img/p2.1.10.png)
+![Hasil Praktkum](img/p2.1.11.png)
+![Hasil Praktkum](img/p2.1.12.png)
 
-**Page Controller '/articles/'**
-Pembuatan PageController yang menangani beberapa halaman sekaligus (Home, About, dan Articles).
-![Hasil Resource Controller](img/controller4.png)
+</blockquote>
+</details>
 
-**Page Controller '{id}'**
-Pembuatan PageController yang menangani beberapa halaman sekaligus (Home, About, dan Articles).
-![Hasil Resource Controller](img/controller5.png)
+<br>
 
-**Single Action Controller**
-Hasil akhir yang didapatkan akan ada HomeController, AboutController dan ArticleController
-![Single Action Controller](img/singleActionController.png)
+<details>
+<summary><b>PRAKTIKUM 2.2 : Pembuatan file migrasi dengan relasi</b></summary>
+<br>
+<blockquote>
 
-**Resource Controller**
-Implementasi PhotoController menggunakan tipe Resource untuk menangani fungsi CRUD secara otomatis.
-![Hasil Resource Controller](img/photoController.png)
+**Membuat file migrasi untuk table m_user**
+![Hasil Praktkum](img/p2.2.1.png)
+![Hasil Praktkum](img/p2.2.2.png)
+![Hasil Praktkum](img/p2.2.3.png)
+![Hasil Praktkum](img/p2.2.4.png)
+
+**Membuat file migrasi untuk table m_barang**
+![Hasil Praktkum](img/p2.2.5.png)
+![Hasil Praktkum](img/p2.2.6.png)
+![Hasil Praktkum](img/p2.2.7.png)
+![Hasil Praktkum](img/p2.2.8.png)
+
+**Membuat file migrasi untuk table t_penjualan**
+![Hasil Praktkum](img/p2.2.9.png)
+![Hasil Praktkum](img/p2.2.10.png)
+![Hasil Praktkum](img/p2.2.11.png)
+![Hasil Praktkum](img/p2.2.12.png)
+
+**Membuat file migrasi untuk table t_stok**
+![Hasil Praktkum](img/p2.2.13.png)
+![Hasil Praktkum](img/p2.2.14.png)
+![Hasil Praktkum](img/p2.2.15.png)
+![Hasil Praktkum](img/p2.2.16.png)
+
+**Membuat file migrasi untuk table t_penjualan_detail**
+![Hasil Praktkum](img/p2.2.17.png)
+![Hasil Praktkum](img/p2.2.18.png)
+![Hasil Praktkum](img/p2.2.19.png)
+![Hasil Praktkum](img/p2.2.20.png)
+
+**Tampilan designer pada phpMyAdmin setelah semua file migrasi telah dibuat**
+![Hasil Praktkum](img/p2.2.21.png)
+
 
 </blockquote>
 </details>
