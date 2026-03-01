@@ -97,7 +97,6 @@
 **Tampilan designer pada phpMyAdmin setelah semua file migrasi telah dibuat**
 ![Hasil Praktkum](img/p2.2.21.png)
 
-
 </blockquote>
 </details>
 
@@ -156,6 +155,46 @@
 ![Hasil Praktkum](img/p3.31.png)
 ![Hasil Praktkum](img/p3.32.png)
 
+</blockquote>
+</details>
+
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 4 : Implementasi DB Facade</b></summary>
+<br>
+<blockquote>
+
+**Membuat controller untuk mengelola data pada table m_level**
+![Hasil Praktkum](img/p4.1.png)
+
+**Modifikasi routing di PWL_POS/routes/web.php**
+![Hasil Praktkum](img/p4.2.png)
+
+**Modifikasi file LevelController untuk menambahkan 1 data ke table m_level**
+![Hasil Praktkum](img/p4.3.png)
+
+**Hasil yang terjadi pada table m_level setelah dijalankan di browser**
+![Hasil Praktkum](img/p4.4.png)
+
+**Modifikasi file LevelController untuk meng-update data di table m_level**
+![Hasil Praktkum](img/p4.5.png)
+
+**Hasil yang terjadi pada table m_level setelah dijalankan di browser**
+![Hasil Praktkum](img/p4.6.png)
+![Hasil Praktkum](img/p4.7.png)
+
+**Modifikasi file LevelController untuk melakukan proses hapus data di table m_level**
+![Hasil Praktkum](img/p4.8.png)
+
+**Modifikasi file LevelController untuk menampilkan data yang ada di table m_level**
+![Hasil Praktkum](img/p4.9.png)
+
+**Membuat view level**
+![Hasil Praktkum](img/p4.10.png)
+
+**Hasil menjalankan view level di browser**
+![Hasil Praktkum](img/p4.11.png)
 
 </blockquote>
 </details>
