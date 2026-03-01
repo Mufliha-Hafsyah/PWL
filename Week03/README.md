@@ -217,9 +217,10 @@
 **Modifikasi file LevelController untuk menambahkan 1 data ke table m_kategori**
 ![Hasil Praktkum](img/p5.3.png)
 
-**Hasil yang terjadi pada table m_kategori setelah dijalankan di browser**
+**Hasil yang terjadi pada table m_kategori setelah dijalankan di browser**    
 
 ![Hasil Praktkum](img/p5.4.png)
+
 ![Hasil Praktkum](img/p5.5.png)
 
 **Modifikasi file LevelController untuk meng-update data di table m_kategori**
