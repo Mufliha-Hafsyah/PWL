@@ -218,6 +218,7 @@
 ![Hasil Praktkum](img/p5.3.png)
 
 **Hasil yang terjadi pada table m_kategori setelah dijalankan di browser**
+
 ![Hasil Praktkum](img/p5.4.png)
 ![Hasil Praktkum](img/p5.5.png)
 
