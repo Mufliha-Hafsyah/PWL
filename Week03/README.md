@@ -191,9 +191,11 @@
 ![Hasil Praktkum](img/p4.9.png)
 
 **Membuat view level**
+
 ![Hasil Praktkum](img/p4.10.png)
 
 **Hasil menjalankan view level di browser**
+
 ![Hasil Praktkum](img/p4.11.png)
 
 </blockquote>
