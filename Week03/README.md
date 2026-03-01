@@ -200,5 +200,46 @@
 
 </blockquote>
 </details>
+
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 5 : Implementasi Query Builder</b></summary>
+<br>
+<blockquote>
+
+**Membuat controller untuk mengelola data pada table m_kategori**
+![Hasil Praktkum](img/p5.1.png)
+
+**Modifikasi routing di PWL_POS/routes/web.php**
+![Hasil Praktkum](img/p5.2.png)
+
+**Modifikasi file LevelController untuk menambahkan 1 data ke table m_kategori**
+![Hasil Praktkum](img/p5.3.png)
+
+**Hasil yang terjadi pada table m_kategori setelah dijalankan di browser**
+![Hasil Praktkum](img/p5.4.png)
+![Hasil Praktkum](img/p5.5.png)
+
+**Modifikasi file LevelController untuk meng-update data di table m_kategori**
+![Hasil Praktkum](img/p5.6.png)
+
+**Hasil yang terjadi pada table m_kategori setelah dijalankan di browser**
+![Hasil Praktkum](img/p5.7.png)
+![Hasil Praktkum](img/p5.8.png)
+
+**Modifikasi file LevelController untuk melakukan proses hapus data di table m_kategori**
+![Hasil Praktkum](img/p5.9.png)
+
+**Modifikasi file LevelController untuk menampilkan data yang ada di table m_kategori**
+![Hasil Praktkum](img/p5.10.png)
+
+**Membuat view kategori**
+
+![Hasil Praktkum](img/p5.11.png)
+
+**Hasil menjalankan view kategori di browser**
+
+![Hasil Praktkum](img/p5.12.png)
 ---
 <p align="right">Tahun Akademik 2025/2026</p>
