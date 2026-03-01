@@ -104,21 +104,58 @@
 <br>
 
 <details>
-<summary><b>PRAKTIKUM 3 : VIEW</b></summary>
+<summary><b>PRAKTIKUM 3 : Membuat file seeder</b></summary>
 <br>
 <blockquote>
 
-**Implementasi Blade View**
-Pada tahap ini, dibuat file hello.blade.php di dalam folder resources/views. Pengamatan menunjukkan bahwa untuk menampilkan struktur HTML yang kompleks, kita harus menggunakan View daripada hanya mengembalikan string dari rute atau controller.
-![Hasil Implementasi View](img/view1.png)
+**Membuat file seeder untuk table m_level**
+![Hasil Praktkum](img/p3.1.png)
+![Hasil Praktkum](img/p3.2.png)
+![Hasil Praktkum](img/p3.3.png)
+![Hasil Praktkum](img/p3.4.png)
 
-**Organisasi View dalam Sub-folder**
-File view diletakkan di dalam sub-folder blog. Pengamatan menunjukkan cara pemanggilannya di controller menggunakan notasi titik (blog.hello). Hal ini sangat berguna untuk merapikan file tampilan dalam proyek skala besar.
-![Hasil Passing Data](img/view2.png)
+**Membuat file seeder untuk table m_user**
+![Hasil Praktkum](img/p3.5.png)
+![Hasil Praktkum](img/p3.6.png)
+![Hasil Praktkum](img/p3.7.png)
+![Hasil Praktkum](img/p3.8.png)
 
-**Passing Data ke View**
-Dilakukan pengiriman variabel dari Controller ke View menggunakan method with(). Hasil pengamatan menunjukkan bahwa data dapat ditampilkan secara dinamis menggunakan sintaks kurung kurawal ganda {{ $variable }} milik mesin template Blade.
-![Hasil Passing Data](img/view3.png)
+**Membuat file seeder untuk table m_kategori**
+![Hasil Praktkum](img/p3.9.png)
+![Hasil Praktkum](img/p3.10.png)
+![Hasil Praktkum](img/p3.11.png)
+![Hasil Praktkum](img/p3.12.png)
+
+**Membuat file seeder untuk table m_supplier**
+![Hasil Praktkum](img/p3.13.png)
+![Hasil Praktkum](img/p3.14.png)
+![Hasil Praktkum](img/p3.15.png)
+![Hasil Praktkum](img/p3.16.png)
+
+**Membuat file seeder untuk table m_barang**
+![Hasil Praktkum](img/p3.17.png)
+![Hasil Praktkum](img/p3.18.png)
+![Hasil Praktkum](img/p3.19.png)
+![Hasil Praktkum](img/p3.20.png)
+
+**Membuat file seeder untuk table t_stok**
+![Hasil Praktkum](img/p3.21.png)
+![Hasil Praktkum](img/p3.22.png)
+![Hasil Praktkum](img/p3.23.png)
+![Hasil Praktkum](img/p3.24.png)
+
+**Membuat file seeder untuk table t_penjualan**
+![Hasil Praktkum](img/p3.25.png)
+![Hasil Praktkum](img/p3.26.png)
+![Hasil Praktkum](img/p3.27.png)
+![Hasil Praktkum](img/p3.28.png)
+
+**Membuat file seeder untuk table t_penjualan_detail**
+![Hasil Praktkum](img/p3.29.png)
+![Hasil Praktkum](img/p3.30.png)
+![Hasil Praktkum](img/p3.31.png)
+![Hasil Praktkum](img/p3.32.png)
+
 
 </blockquote>
 </details>
