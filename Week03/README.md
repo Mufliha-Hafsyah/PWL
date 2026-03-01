@@ -243,5 +243,49 @@
 **Hasil menjalankan view kategori di browser**
 
 ![Hasil Praktkum](img/p5.12.png)
+
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 6 : Implementasi Eloquent ORM</b></summary>
+<br>
+<blockquote>
+
+**Membuat file model untuk table m_kategorim_user**
+![Hasil Praktkum](img/p6.1.png)
+
+**Modifikasi file UserModel.php**
+![Hasil Praktkum](img/p6.2.png)
+
+**Modifikasi route web.php untuk mencoba routing ke controller UserController**
+![Hasil Praktkum](img/p6.3.png)
+
+**Membuat file controller UserContoller dan modifikasi**    
+
+![Hasil Praktkum](img/p6.4.png)
+
+![Hasil Praktkum](img/p6.5.png)
+
+**Membuat view user.blade.php**
+![Hasil Praktkum](img/p6.6.png)
+
+**Hasil yang terjadi setelah dijalankan di browser**
+![Hasil Praktkum](img/p6.7.png)
+
+**Modifikasi lagi file UserController**
+![Hasil Praktkum](img/p6.8.png)
+
+**Hasil yang terjadi setelah dijalankan di browser**
+![Hasil Praktkum](img/p6.9.png)
+
+**Modifikasi lagi file UserController**
+![Hasil Praktkum](img/p6.10.png)
+
+**Hasil yang terjadi setelah dijalankan di browser**
+
+![Hasil Praktkum](img/p6.11.png)
+
+
+
 ---
 <p align="right">Tahun Akademik 2025/2026</p>
