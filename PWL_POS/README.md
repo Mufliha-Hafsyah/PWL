@@ -384,17 +384,253 @@ Menurut saya, Eloquent ORM adalah yang paling mudah. Karena penulisan kodenya ja
 <br>
 
 <details>
-<summary><b>PRAKTIKUM 1 : $fillable$</b></summary>
+<summary><b>PRAKTIKUM 1 : $fillable</b></summary>
 <br>
 <blockquote>
 
-**Membuat database baru dengan nama PWL_POS**
-![Hasil Praktikum](img/p1.1.png)
+**Langkah 3**
+![Hasil Praktikum](img/w4p1.1.png)
+Penjelasan:
+Dengan menggunakan $fillable, kita dapat menentukan kolom apa saja yang diisi
+ketika dipanggil pada controller, lalu menggunakan create(data) untuk mengirim
+data yang sudah diisi.
 
-**Menyesuaikan file .env dengan database PWL_POS**
-![Hasil Praktikum](img/p1.2.png)
+**Langkah 6**
+![Hasil Praktikum](img/w4p1.2.png)
+Penjelasan:
+Hal ini terjadi karena pada $fillable pada array dengan nama password dihapus,
+akan tetapi pada data controller diisikan index password Sehingga terjadinya
+queryExeception
 
 </blockquote>
 </details>
+
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 2.1 : Retrieving Single Models</b></summary>
+<br>
+<blockquote>
+
+**Langkah 3**
+![Hasil Praktikum](img/w4p2.1.1.png)
+Penjelasan:
+Dengan menggunakan find(1) kita dapat mencari data user dengan id 1, isi dari
+function find sendiri digunakan untuk merujuk pada id yang ingin dicari.
+
+**Langkah 5**
+![Hasil Praktikum](img/w4p2.1.2.png)
+Penjelasan:
+Kode di atas digunakan untuk mencari menggunakan kondisi, yang dimana
+ketika level_id sama dengan 1. Ketika data ditemukan maka akan muncul pada
+browser atau diambil dan dikirim ke view.
+
+**Langkah 7**
+![Hasil Praktikum](img/w4p2.1.3.png)
+Penjelasan:
+Dengan menggunakan syntax di atas, kita dapat lebih mempresingkat dengan
+memanggil function firstWhere(kolom, data) untuk mencari sebuah data pada
+database dan akan memunculkan data yang paling cocok dengan yang dicari
+
+**Langkah 9**
+![Hasil Praktikum](img/w4p2.1.4.png)
+Penjelasan:
+Pada findOr kita dapat menetapkan kolom apa saja yang ingin kita panggil ketika
+id yang diinginkan ditemukan, lalu kita dapat menambahkan function yang berisi
+abort 404 ketika data tidak ditemukan.
+
+**Langkah 11**
+![Hasil Praktikum](img/w4p2.1.5.png)
+Ketika data tidak ditemukan, maka function akan mereturn abort 404 kepada
+view Sehingga tampil halaman not found di atas.
+
+</blockquote>
+</details>
+
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 2.2 : Not Found Exceptions</b></summary>
+<br>
+<blockquote>
+
+**Langkah 2**
+![Hasil Praktikum](img/w4p2.2.1.png)
+Penjelasan:
+FindOrFail(1) artinya kita mencari id 1 pada table user, lalu data akan
+ditampilkan dan dikirim ke view.
+
+**Langkah 4**
+![Hasil Praktikum](img/w4p2.2.2.png)
+Penjelasan:
+Kode di atas ingin mencari usename manager9, akan tetapi tidak ditemukan
+hingga pada browser muncul 404 not found. Hal ini dikarenakan kita memanggil
+function firstOrFail, yang dimana nantinya ketika data tidak ditemukan maka akan memunculkan abort 404 alih alih error, sedangkan jika berhasil, maka akan
+menampilkan data pertama yang paling cocok dengan yang dicari.
+
+</blockquote>
+</details>
+
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 2.3 : Retreiving Aggregrates</b></summary>
+<br>
+<blockquote>
+
+**Langkah 2**
+![Hasil Praktikum](img/w4p2.3.1.png)
+Kode di atas digunakan untuk menghitung berapa banyak user yang memiliki
+level_id 2, lalu $user disalin dalam bentuk json menggunakan dd().
+
+**Langkah 4**
+![Hasil Praktikum](img/w4p2.3.2.png)
+
+</blockquote>
+</details>
+
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 2.4 : Retreiving or Creating Models</b></summary>
+<br>
+<blockquote>
+
+**Langkah 3**
+![Hasil Praktikum](img/w4p2.4.1.png)
+Penjelasan:
+Dengan menggunakan firstOrCreate kita dapat mencari data atau menambahkan
+data jika belum ada, contoh di atas mencari username manager dengan nama
+Manager, lalu jika ditemukan akan ditampilkan hasilnya.
+
+**Langkah 5**
+![Hasil Praktikum](img/w4p2.4.2.png)
+![Hasil Praktikum](img/w4p2.4.3.png)
+Penjelasan:
+Kode di atas merupakan contoh implementasi ketika ingin menambahkan user
+yang belum ada pada database menggunakan firstOrCreate. Setelah dibuat, user
+akan ditampilkan pada view.
+
+**Langkah 7**
+![Hasil Praktikum](img/w4p2.4.4.png)
+Penjelasan:
+Sama halnya dengan firstOrNew, kita dapat mencari data sesuai yang diinginkan
+sebagai contoh mencari username manager dengan nama Manager.
+
+**Langkah 9**
+![Hasil Praktikum](img/w4p2.4.5.png)
+![Hasil Praktikum](img/w4p2.4.6.png)
+Penjelasan:
+Kita dapat menambahkan data untuk ditampilkan pada browser, tetapi jika
+menggunakan firstOrNew data yang ditambahkan tidak akan otomatis masuk
+pada database.
+
+**Langkah 11**
+![Hasil Praktikum](img/w4p2.4.7.png)
+![Hasil Praktikum](img/w4p2.4.8.png)
+Penjelasan:
+Dengan memanggil function save, data user yang baru akan disave kedalam
+database.
+
+</blockquote>
+</details>
+
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 2.5 : Attribute Changes</b></summary>
+<br>
+<blockquote>
+
+**Langkah 2**
+![Hasil Praktikum](img/w4p2.5.1.png)
+Penjelasan:
+Kode di atas menunjukkan penggunaan Dirty States pada Eloquent Laravel
+untuk mengecek apakah ada perubahan data pada model sebelum atau sesudah
+disimpan ke database.
+
+**Langkah 4**
+![Hasil Praktikum](img/w4p2.5.2.png)
+Penjelasan:
+Function wasChanged() digunakan setelah $user->save() untuk mengecek apakah
+ada atribut yang baru saja berubah saat proses penyimpanan tadi.
+</blockquote>
+</details>
+
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 2.6 : Create, Read, Update, Delete (CRUD)</b></summary>
+<br>
+<blockquote>
+
+**Langkah 3**
+![Hasil Praktikum](img/w4p2.6.1.png)
+Penjelasan:
+Kode yang digunakan untuk menampilkan semua data user yang ada di database,
+lalu menambahkan 2 link di tiap baris untuk melakukan aksi ubah dan hapus.
+
+**Langkah 7**
+![Hasil Praktikum](img/w4p2.6.2.png)
+![Hasil Praktikum](img/w4p2.6.3.png)
+Penjelasan:
+Error 404 pada langkah ini terjadi karena sistem tidak menemukan endpoint atau rute yang dituju saat tombol 'Simpan' diklik. Hal ini disebabkan oleh ketidaksesuaian antara URL pada atribut action di file user_tambah.blade.php dengan rute yang terdaftar di web.php. Setelah rute Route::post('/user/tambah_simpan', ...) ditambahkan dan disinkronkan dengan atribut action pada form, dat
+
+**Langkah 10**
+![Hasil Praktikum](img/w4p2.6.4.png)
+Penjelasan:
+Dengan menambahkan route post untuk menangkap data yang diberikan pada
+form, kita dapat menambahkan data menggunakan form seperti di atas,
+menambahkan username manager19 dengan nama Mufliha Hafsyah.
+
+**Langkah 14**
+![Hasil Praktikum](img/w4p2.6.5.png)
+![Hasil Praktikum](img/w4p2.6.6.png)
+Penjelasan:
+Pada langkah ini, proses simpan perubahan data di browser masih akan error, karena rute (route) untuk ubah_simpan belum dibuat.
+
+**Langkah 17**
+![Hasil Praktikum](img/w4p2.6.7.png)
+![Hasil Praktikum](img/w4p2.6.8.png)
+Penjelasan:
+Dengan menggunakan request, kita dapat menimpa attribute yang ingin diubah,
+seperti di atas, mengubah nama yang awalnya admin menjadi admin1, dengan mencari id
+yang ingin diubah terlebih dahulu menggunakan find($id) lalu menimpa semua
+data yang ada pada database dengan yang ada di form.
+
+**Langkah 20**
+![Hasil Praktikum](img/w4p2.6.9.png)
+Penjelasan:
+Ketika mengklik link atau tombol hapus, route akan memanggil user controller
+dengan function hapus, lalu mencari id pada baris yang ingin dihapus, lalu
+menjalankan function atau aksi delete() setelah berhasil maka akan di redirect ke
+page ‘/user’
+</blockquote>
+</details>
+
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 2.7 : Relationships</b></summary>
+<br>
+<blockquote>
+
+**Langkah 3**
+![Hasil Praktikum](img/w4p2.7.1.png)
+Penjelasan:
+Dengan menggunakan dd($user) yang dimana $user berisi hasil dari get() data
+pada usermodel yang berelasi dengan levelmodel kita dapat melihat attribute
+yang ada pada usermodel dan levelmodel seperti username dll.
+
+**Langkah 6**
+![Hasil Praktikum](img/w4p2.7.2.png)
+Penjelasan:
+Dengan terciptanya relationship antara usermodel dan levelmodel, kita dapat
+mengakses kode level dan nama level milik table m_user untuk dicocokkan
+dengan level id nya.
+</blockquote>
+</details>
+
+<br>
 --- 
 <p align="right">Tahun Akademik 2025/2026</p>
