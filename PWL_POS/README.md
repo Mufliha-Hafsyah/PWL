@@ -1,5 +1,4 @@
-# PEMROGRAMAN WEB LANJUT - JOBSHEET 03
-## MIGRATION, SEEDER, DB FAÇADE, QUERY BUILDER, dan ELOQUENT ORM
+# LAPORAN PRAKTIKUM - PEMROGRAMAN WEB LANJUT
 
 ---
 
@@ -11,6 +10,8 @@
 | **Kelas** | TI-2F |
 
 ---
+
+## JOBSHEET 3 MIGRATION, SEEDER, DB FAÇADE, QUERY BUILDER, dan ELOQUENT ORM
 
 ### Dokumentasi Praktikum
 <br>
@@ -374,5 +375,26 @@ Menurut saya, Eloquent ORM adalah yang paling mudah. Karena penulisan kodenya ja
 </details>
 
 <br>
+
 ---
+
+## JOBSHEET 4 MODEL dan ELOQUENT ORM
+
+### Dokumentasi Praktikum
+<br>
+
+<details>
+<summary><b>PRAKTIKUM 1 : $fillable$</b></summary>
+<br>
+<blockquote>
+
+**Membuat database baru dengan nama PWL_POS**
+![Hasil Praktikum](img/p1.1.png)
+
+**Menyesuaikan file .env dengan database PWL_POS**
+![Hasil Praktikum](img/p1.2.png)
+
+</blockquote>
+</details>
+--- 
 <p align="right">Tahun Akademik 2025/2026</p>
