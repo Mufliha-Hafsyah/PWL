@@ -84,13 +84,10 @@ Panel Builder merupakan komponen inti dalam ekosistem Filament yang berfungsi se
 ![Hasil Praktikum](img/w5p2.7.png)
 
 **Menampilkan Data pada Tabel**
-![Hasil Praktikum](img/w5p2.4.png)
-![Hasil Praktikum](img/w5p2.5.png)
-![Hasil Praktikum](img/w5p2.6.png)
-![Hasil Praktikum](img/w5p2.7.png)
+![Hasil Praktikum](img/w5p2.8.png)
 
 **Mengganti Icon Menu Resource**
-![Hasil Praktikum](img/w5p2.4.png)
+![Hasil Praktikum](img/w5p2.9.png)
 </blockquote>
 </details>
 
