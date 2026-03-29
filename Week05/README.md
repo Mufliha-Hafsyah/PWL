@@ -113,7 +113,7 @@ Jawab :
 Validasi email unik dapat ditambahkan pada komponen TextInput di dalam form() menggunakan fungsi berantai (chained method) unique(). 
 - Contoh implementasinya:
 Forms\Components\TextInput::make('email')->email()->required()->unique(ignoreRecord: true)
-Parameter ignoreRecord: true penting ditambahkan agar validasi unik tidak menyebabkan error saat kita sedang mengedit data yang sama.
+- Parameter ignoreRecord: true penting ditambahkan agar validasi unik tidak menyebabkan error saat kita sedang mengedit data yang sama.
 
 **4. Mengapa password tidak perlu kita hash manual?**
 Jawab : 
