@@ -208,6 +208,7 @@ Hal ini bergantung pada pengaturan foreign key constraint yang digunakan:
 <summary><b>2. Implementasi Form Elements</b></summary>
 <br>
 <blockquote>
+
 **a. Text Input (Title&Slug)**
 ![Hasil Praktikum](img/w6p1.3.png)
 
@@ -279,7 +280,7 @@ Jawab :
 Meskipun keduanya digunakan untuk mengolah konten teks panjang, perbedaannya terletak pada format penyimpanan dan antarmukanya:
 - MarkdownEditor: Digunakan untuk menulis teks dengan sintaks Markdown (seperti # untuk judul, ** untuk tebal). Data yang disimpan di database adalah teks mentah beserta kode Markdown tersebut.
 
-- RichEditor: Merupakan editor WYSIWYG (What You See Is What You Get) yang memungkinkan pengguna memformat teks secara langsung melalui tombol-tombol (seperti MS Word). Data yang disimpan biasanya berupa tag HTML (seperti <b> atau <h1>)
+- RichEditor: Merupakan editor WYSIWYG (What You See Is What You Get) yang memungkinkan pengguna memformat teks secara langsung melalui tombol-tombol (seperti MS Word). Data yang disimpan biasanya berupa tag HTML (seperti ,< b > atau < h1 >)
 
 </blockquote>
 </details>
@@ -328,6 +329,7 @@ Meskipun keduanya digunakan untuk mengolah konten teks panjang, perbedaannya ter
 <summary><b>3. Menggunakan Group untuk Layout Horizontal</b></summary>
 <br>
 <blockquote>
+
 ![Hasil Praktikum](img/w6p2.6.png)
 ![Hasil Praktikum](img/w6p2.7.png)
 
