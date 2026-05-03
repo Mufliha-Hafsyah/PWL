@@ -734,6 +734,10 @@ Penggunaan urutan menurun atau descending (DESC) sebagai standar biasanya ditera
 ![Hasil Praktikum](img/w11p1.2.png)<br>
 **Menambahkan Search pada Kolom Relasi (Category)**
 ![Hasil Praktikum](img/w11p1.3.png)<br>
+**Menambahkan Filter Created At**
+![Hasil Praktikum](img/w11p1.4.png)<br>
+**Menambahkan Query Logic**
+![Hasil Praktikum](img/w11p1.5.png)<br>
 
 </blockquote>
 </details>
