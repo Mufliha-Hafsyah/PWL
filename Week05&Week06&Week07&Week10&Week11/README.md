@@ -718,4 +718,58 @@ Penggunaan urutan menurun atau descending (DESC) sebagai standar biasanya ditera
 
 ---
 
+## JOBSHEET WEEK 11
+
+### Implementasi Search & Filter pada Table Filament
+<br>
+
+<details>
+<summary><b>Hasil Praktikum</b></summary>
+<br>
+<blockquote>
+
+**Menambahkan Search pada Kolom Title**
+![Hasil Praktikum](img/w11p1.1.png)<br>
+**Menambahkan Search pada Kolom Slug**
+![Hasil Praktikum](img/w11p1.2.png)<br>
+**Menambahkan Search pada Kolom Relasi (Category)**
+![Hasil Praktikum](img/w11p1.3.png)<br>
+
+</blockquote>
+</details>
+
+<br>
+
+<details>
+<summary><b>Analisis & Diskusi</b></summary>
+<br>
+<blockquote>
+
+**1. Mengapa search tidak cocok untuk filter tanggal?**
+<br>
+Jawab : 
+Fitur search pada dasarnya bekerja dengan membandingkan kecocokan teks atau string secara parsial (partial match) menggunakan logika LIKE pada database. Tanggal di dalam database biasanya disimpan dalam format standar (seperti YYYY-MM-DD), sehingga jika pengguna mencari dengan format berbeda (misalnya "28 Feb"), sistem search sering kali gagal menemukannya karena perbedaan penulisan karakter. Sementara itu, filter menggunakan komponen khusus seperti DatePicker yang memungkinkan pencarian dilakukan berdasarkan nilai objek tanggal yang pasti, bukan sekadar kecocokan teks.
+
+**2.  Apa fungsi relationship() pada SelectFilter?**
+<br>
+Jawab : 
+Method relationship() pada SelectFilter berfungsi untuk menghubungkan filter secara otomatis dengan data yang ada pada tabel relasi di database. Dengan menggunakan method ini, Filament akan secara otomatis mengambil daftar data dari tabel terkait (misalnya mengambil semua nama dari tabel categories) dan menampilkannya sebagai opsi pilihan dalam dropdown filter. Hal ini memudahkan pengembang karena tidak perlu menulis kueri manual untuk memunculkan daftar kategori yang tersedia bagi admin.
+
+**3. Mengapa kita perlu whereDate() pada query filter?**
+<br>
+Jawab : 
+Kita membutuhkan whereDate() karena kolom seperti created_at biasanya memiliki tipe data datetime yang menyimpan informasi hingga satuan jam, menit, dan detik. Jika kita menggunakan perbandingan biasa (=), sistem akan mencari data yang waktunya tepat hingga ke detiknya, sehingga data sering tidak muncul meskipun tanggalnya sama. Fungsi whereDate() memerintahkan database untuk hanya membandingkan bagian tanggalnya saja (Tahun-Bulan-Hari) dan mengabaikan bagian waktunya, sehingga pencarian tanggal menjadi akurat.
+
+**4. Apa perbedaan searchable() dan filters()?**
+<br>
+Jawab : 
+Perbedaan utamanya terletak pada cara kerja dan input yang digunakan pengguna untuk menemukan data. Method searchable() digunakan untuk mengaktifkan kolom pencarian teks yang bekerja secara real-time melalui satu kotak input global di atas tabel, biasanya untuk kolom seperti judul atau slug. Sedangkan filters() menyediakan menu khusus (biasanya dalam bentuk ikon corong) yang berisi berbagai komponen input seperti dropdown atau pemilih tanggal untuk menyaring data berdasarkan kondisi yang lebih spesifik dan terstruktur.
+
+</blockquote>
+</details>
+
+<br>
+
+---
+
 <p align="right">Tahun Akademik 2025/2026</p>
