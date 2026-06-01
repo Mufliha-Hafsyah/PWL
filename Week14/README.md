@@ -25,10 +25,11 @@
 ![Hasil Praktikum](img/w14p1.1.png)<br>
 **Menghubungkan Relationship Manager**
 ![Hasil Praktikum](img/w14p1.2.png)<br>
-**Membuat Custom Action (Ubah Status Publish)**
-![Hasil Praktikum](img/w13p1.3.png)<br>
-![Hasil Praktikum](img/w13p1.4.png)<br>
-![Hasil Praktikum](img/w13p1.5.png)<br>
+**Menambahkan Kolom pada Relationship Table**
+![Hasil Praktikum](img/w14p1.3.png)<br>
+**Membuat Form Create Post pada Relationship**
+![Hasil Praktikum](img/w14p1.4.png)<br>
+
 
 </blockquote>
 </details>
@@ -40,45 +41,36 @@
 <br>
 <blockquote>
 
-**1. Mengapa action di tabel lebih efisien dibanding halaman edit?**
+**1. Apa perbedaan relationship() dengan options()?**
 <br>
 Jawab : 
 
-- Memangkas Jumlah Klik (Less Clicks): Pengguna dapat mengeksekusi aksi instan seperti menghapus (DeleteAction) atau menggandakan data (ReplicateAction) langsung dari baris tabel tanpa perlu menunggu proses loading berpindah ke halaman edit terlebih dahulu.  
-- Menghemat Waktu Operasional: Admin dapat mengelola banyak data secara cepat di satu halaman utama, mengurangi beban kerja server untuk rendering halaman formulir edit yang terpisah.  
-- Metode Pembaruan In-Place: Memungkinkan modifikasi data minor (seperti mengubah visibilitas lewat modal status change) secara langsung, sehingga alur kerja (workflow) manajemen data menjadi jauh lebih mulus.
+- ->relationship('nama_relasi', 'field_tujuan'): Method ini secara otomatis membaca relasi Eloquent yang didefinisikan pada model Laravel. Filament akan melakukan querying ke database untuk mengambil data relasi secara dinamis, mengelola penyimpanan foreign key otomatis, dan mendukung pencarian server-side (searchable).  
+- ->options([...]): Method ini digunakan untuk memberikan daftar pilihan statis atau hasil array manual (misalnya menggunakan kumpulan data konstan atau manual Model::all()->pluck()). Kelemahannya adalah Filament tidak mengetahui ikatan relasi antar-model secara langsung dan seluruh data dipaksa dimuat sekaligus ke dalam memori aplikasi sejak awal.  
 
-**2.  Apa perbedaan predefined action dan custom action?**
-<br>
-Jawab : 
-<br>
-
-- Predefined Action: Aksi siap pakai bawaan dari Filament (contohnya EditAction, DeleteAction, ReplicateAction) yang sudah otomatis mengemas fungsi logika dasar database, komponen UI, ikon standar, dan dialog konfirmasinya sendiri dari sistem.  
-- Custom Action: Aksi modifikasi mandiri menggunakan Action::make() di mana kita sebagai pengembang mendefinisikan sendiri nama aksi, skema form internal (->schema()), ikon visual, hingga logika eksekusi manipulasi data yang spesifik di dalam fungsi penanganan callback (->action()).  
-
-**3. Bagaimana cara menambahkan validasi dalam custom action?**
+**2.  Mengapa searchable penting untuk dataset besar?**
 <br>
 Jawab : 
 <br>
 
-Validasi form di dalam modal custom action Filament dapat diterapkan langsung pada komponen input yang ada di dalam method ->schema(). Caranya adalah dengan merantai (chaining) method validasi standar Filament Form pada komponen input tersebut, misalnya:
-<br> 
-Action::make('status')
-    ->schema([
-        Checkbox::make('published')
-            ->rules(['required', 'boolean']), 
-    ])
-<br> 
-Selain itu, kita juga bisa menggunakan method seperti ->required(), ->reactive(), atau kustomisasi fungsi penutupan (closure validation) langsung pada field formulir di dalam modal sebelum fungsi ->action() dijalankan.
+- Efisiensi Memori & Performa (Lazy Loading): Jika sebuah tabel memiliki ribuan data relasi (misalnya ribuan kategori atau produk), menggunakan dropdown biasa akan memuat semua data tersebut sekaligus, membuat loading halaman menjadi sangat lambat (overhead). Fitur ->searchable() membuat Filament hanya memuat data ketika pengguna mengetik kata kunci pencarian.  
+- Pengalaman Pengguna (UX) yang Lebih Baik: Memudahkan pengguna admin untuk menemukan data spesifik dengan cepat melalui pencarian teks daripada harus menggulir (scrolling) daftar dropdown yang sangat panjang.  
 
-**4. Kapan kita menggunakan Replicate?**
+**3. Apa fungsi Relationship Manager pada Filament?**
 <br>
 Jawab : 
 <br>
 
-Aksi ReplicateAction sangat ideal digunakan pada situasi berikut:  
-- Duplikasi Data Berpola Sama: Ketika admin perlu membuat data baru yang mayoritas isinya sangat mirip atau identik dengan data lama yang sudah ada, sehingga tidak perlu mengetik ulang dari awal.  
-- Pembuatan Template Post/Produk: Jika sistem memiliki konten dasar atau draft berulang; admin cukup menyalin (copy) data tersebut, lalu tinggal mengubah sedikit bagian yang berbeda (seperti judul atau slug). 
+- Pengelolaan Data Relasi Terpusat (CRUD Inline): Memungkinkan admin panel untuk mengelola data anak (child records) langsung dari dalam halaman detail/edit data induk (parent record) tanpa harus berpindah halaman resource.  
+- Otomatisasi Foreign Key: Saat membuat data baru melalui modul modal di Relationship Manager, properti kunci asing (foreign key seperti category_id) akan otomatis terisi mengikuti konteks data induk yang sedang dibuka.
+
+**4. Kapan menggunakan HasMany dan BelongsTo?**
+<br>
+Jawab : 
+<br>
+
+- HasMany (Satu ke Banyak): Digunakan pada model Induk yang memiliki atau mengayomi banyak data anak. Contoh: Model Category memiliki fungsi posts() dengan relasi hasMany(Post::class) karena satu kategori bisa menampung banyak artikel.  
+- BelongsTo (Banyak ke Satu): Digunakan pada model Anak yang menyimpan kolom foreign key dari data induk. Contoh: Model Post memiliki fungsi category() dengan relasi belongsTo(Category::class) karena setiap artikel hanya terikat pada satu kategori spesifik saja.  
 
 </blockquote>
 </details>
