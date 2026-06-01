@@ -21,10 +21,10 @@
 <br>
 <blockquote>
 
-**Menambahkan Delete Action**
-![Hasil Praktikum](img/w13p1.1.png)<br>
-**Menambahkan Replicate (Copy) Action**
-![Hasil Praktikum](img/w13p1.2.png)<br>
+**Membuat Dropdown Searchable**
+![Hasil Praktikum](img/w14p1.1.png)<br>
+**Menghubungkan Relationship Manager**
+![Hasil Praktikum](img/w14p1.2.png)<br>
 **Membuat Custom Action (Ubah Status Publish)**
 ![Hasil Praktikum](img/w13p1.3.png)<br>
 ![Hasil Praktikum](img/w13p1.4.png)<br>
